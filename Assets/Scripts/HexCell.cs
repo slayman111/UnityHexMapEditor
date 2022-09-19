@@ -191,6 +191,8 @@ public class HexCell : MonoBehaviour
 
     public int SearchPhase { get; set; }
 
+    public HexUnit Unit { get; set; }
+
     public HexCell GetNeighbor(HexDirection direction) => neighbors[(int)direction];
 
     public void SetNeighbor(HexDirection direction, HexCell cell)
@@ -309,6 +311,7 @@ public class HexCell : MonoBehaviour
                 if (neighbor is not null && neighbor.chunk != chunk)
                     neighbor.chunk.Refresh();
             }
+            if (Unit) Unit.ValidateLocation();
         }
     }
 
@@ -320,7 +323,11 @@ public class HexCell : MonoBehaviour
         RefreshSelfOnly();
     }
 
-    private void RefreshSelfOnly() => chunk.Refresh();
+    private void RefreshSelfOnly()
+    {
+        chunk.Refresh();
+        if (Unit) Unit.ValidateLocation();
+    }
 
     private bool IsValidRiverDestination(HexCell neighbor) => neighbor && (elevation >= neighbor.elevation || waterLevel == neighbor.elevation);
 
