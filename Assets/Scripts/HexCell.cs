@@ -177,15 +177,7 @@ public class HexCell : MonoBehaviour
             }
         }
     }
-    public int Distance
-    {
-        get => distance;
-        set
-        {
-            distance = value;
-            UpdateDistanceLabel();
-        }
-    }
+    public int Distance { get => distance; set => distance = value; }
 
     public bool IsSpecial { get => specialIndex > 0; }
 
@@ -196,6 +188,8 @@ public class HexCell : MonoBehaviour
     public int SearchPriority { get => distance + SearchHeuristic; }
 
     public HexCell NextWithSamePriority { get; set; }
+
+    public int SearchPhase { get; set; }
 
     public HexCell GetNeighbor(HexDirection direction) => neighbors[(int)direction];
 
@@ -408,9 +402,9 @@ public class HexCell : MonoBehaviour
         uiRect.localPosition = uiPosition;
     }
 
-    private void UpdateDistanceLabel()
+    public void SetLabel(string text)
     {
         Text label = uiRect.GetComponent<Text>();
-        label.text = distance == int.MaxValue ? "" : distance.ToString();
+        label.text = text;
     }
 }
