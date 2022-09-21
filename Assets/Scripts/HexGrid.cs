@@ -194,7 +194,7 @@ public class HexGrid : MonoBehaviour
             if (!CreateMap(x, z)) return;
 
         for (int i = 0; i < cells.Length; i++)
-            cells[i].Load(reader);
+            cells[i].Load(reader, header);
 
         for (int i = 0; i < chunks.Length; i++)
             chunks[i].Refresh();
@@ -207,13 +207,13 @@ public class HexGrid : MonoBehaviour
         }
     }
 
-    public void FindPath(HexCell fromCell, HexCell toCell, int speed)
+    public void FindPath(HexCell fromCell, HexCell toCell, HexUnit unit)
     {
         ClearPath();
         currentPathFrom = fromCell;
         currentPathTo = toCell;
-        currentPathExists = Search(fromCell, toCell, speed);
-        ShowPath(speed);
+        currentPathExists = Search(fromCell, toCell, unit);
+        ShowPath(unit.Speed);
     }
 
     public HexCell GetCell(Ray ray)
@@ -224,8 +224,9 @@ public class HexGrid : MonoBehaviour
         return null;
     }
 
-    private bool Search(HexCell fromCell, HexCell toCell, int speed)
+    private bool Search(HexCell fromCell, HexCell toCell, HexUnit unit)
     {
+        int speed = unit.Speed;
         searchFrontierPhase += 2;
 
         if (searchFrontier is null) searchFrontier = new();
@@ -248,19 +249,10 @@ public class HexGrid : MonoBehaviour
             {
                 HexCell neighbor = current.GetNeighbor(d);
                 if (neighbor is null || neighbor.SearchPhase > searchFrontierPhase) continue;
-                if (neighbor.IsUnderwater || neighbor.Unit) continue;
+                if (!unit.IsValidDestination(neighbor)) continue;
 
-                HexEdgeType edgeType = current.GetEdgeType(neighbor);
-                if (edgeType == HexEdgeType.Cliff) continue;
-
-                int moveCost;
-                if (current.HasRoadThroughEdge(d)) moveCost = 1;
-                else if (current.Walled != neighbor.Walled) continue;
-                else
-                {
-                    moveCost = edgeType == HexEdgeType.Flat ? 5 : 10;
-                    moveCost += neighbor.UrbanLevel + neighbor.FarmLevel + neighbor.PlantLevel;
-                }
+                int moveCost = unit.GetMoveCost(current, neighbor, d);
+                if (moveCost < 0) continue;
 
                 int distance = current.Distance + moveCost;
                 int turn = (distance - 1) / speed;
