@@ -23,8 +23,8 @@ public class HexCell : MonoBehaviour
     private bool walled;
 
     private int specialIndex;
-
     private int distance;
+    private int visibility;
 
     public HexCoordinates coordinates;
     public RectTransform uiRect;
@@ -37,7 +37,7 @@ public class HexCell : MonoBehaviour
             if (terrainTypeIndex != value)
             {
                 terrainTypeIndex = value;
-                Refresh();
+                ShaderData.RefreshTerrain(this);
             }
         }
     }
@@ -192,6 +192,12 @@ public class HexCell : MonoBehaviour
     public int SearchPhase { get; set; }
 
     public HexUnit Unit { get; set; }
+
+    public HexCellShaderData ShaderData { get; set; }
+
+    public int Index { get; set; }
+
+    public bool IsVisible { get => visibility > 0; }
 
     public HexCell GetNeighbor(HexDirection direction) => neighbors[(int)direction];
 
@@ -365,6 +371,7 @@ public class HexCell : MonoBehaviour
     public void Load(BinaryReader reader)
     {
         terrainTypeIndex = reader.ReadByte();
+        ShaderData.RefreshTerrain(this);
         elevation = reader.ReadByte();
         RefreshPosition();
         waterLevel = reader.ReadByte();
@@ -413,5 +420,17 @@ public class HexCell : MonoBehaviour
     {
         Text label = uiRect.GetComponent<Text>();
         label.text = text;
+    }
+
+    public void IncreaseVisibility()
+    {
+        visibility++;
+        if (visibility == 1) ShaderData.RefreshVisibility(this);
+    }
+
+    public void DecreaseVisibility()
+    {
+        visibility--;
+        if (visibility == 0) ShaderData.RefreshVisibility(this);
     }
 }

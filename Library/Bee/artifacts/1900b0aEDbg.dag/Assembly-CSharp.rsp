@@ -353,6 +353,7 @@
 "Assets/Scripts/EdgeVertices.cs"
 "Assets/Scripts/HexCell.cs"
 "Assets/Scripts/HexCellPriorityQueue.cs"
+"Assets/Scripts/HexCellShaderData.cs"
 "Assets/Scripts/HexCoordinates.cs"
 "Assets/Scripts/HexDirection.cs"
 "Assets/Scripts/HexEdgeType.cs"
