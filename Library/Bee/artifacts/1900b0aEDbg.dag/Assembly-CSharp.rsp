@@ -364,6 +364,7 @@
 "Assets/Scripts/HexHash.cs"
 "Assets/Scripts/HexMapCamera.cs"
 "Assets/Scripts/HexMapEditor.cs"
+"Assets/Scripts/HexMapGenerator.cs"
 "Assets/Scripts/HexMesh.cs"
 "Assets/Scripts/HexMetrics.cs"
 "Assets/Scripts/HexUnit.cs"

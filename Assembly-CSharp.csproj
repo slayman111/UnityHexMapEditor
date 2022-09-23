@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\UI\NewMapMenu.cs" />
     <Compile Include="Assets\Scripts\HexFeatureManager.cs" />
     <Compile Include="Assets\Scripts\HexCell.cs" />
+    <Compile Include="Assets\Scripts\HexMapGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

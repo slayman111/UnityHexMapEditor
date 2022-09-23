@@ -21,6 +21,8 @@ public class HexMapEditor : MonoBehaviour
 
     private bool applyUrbanLevel, applyFarmLevel, applyPlantLevel, applySpecialIndex;
 
+    private bool generateMaps;
+
     private enum OptionalToggle
     {
         Ignore, Yes, No
@@ -68,16 +70,13 @@ public class HexMapEditor : MonoBehaviour
 
     public void SetEditMode(bool toggle) => enabled = toggle;
 
-    public void ShowGrid(bool visible)
-    {
-        if (visible) terrainMaterial.EnableKeyword("GRID_ON");
-        else terrainMaterial.DisableKeyword("GRID_ON");
-    }
+    public void ToggleMapGeneration(bool toggle) => generateMaps = toggle;
 
     private void Awake()
     {
         terrainMaterial.DisableKeyword("GRID_ON");
-        SetEditMode(false);
+        Shader.EnableKeyword("HEX_MAP_EDIT_MODE");
+        SetEditMode(true);
     }
 
     private void Update()
@@ -97,6 +96,12 @@ public class HexMapEditor : MonoBehaviour
             }
         }
         previousCell = null;
+    }
+
+    public void ShowGrid(bool visible)
+    {
+        if (visible) terrainMaterial.EnableKeyword("GRID_ON");
+        else terrainMaterial.DisableKeyword("GRID_ON");
     }
 
     private void HandleInput()

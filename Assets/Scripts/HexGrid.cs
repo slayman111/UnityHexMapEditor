@@ -225,6 +225,10 @@ public class HexGrid : MonoBehaviour
         ShowPath(unit.Speed);
     }
 
+    public HexCell GetCell(int xOffset, int zOffset) => cells[xOffset + zOffset * cellCountX];
+
+    public HexCell GetCell(int cellIndex) => cells[cellIndex];
+
     public HexCell GetCell(Ray ray)
     {
         if (Physics.Raycast(ray, out RaycastHit hit))

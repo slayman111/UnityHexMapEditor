@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class NewMapMenu : MonoBehaviour
 {
+    private bool generateMaps = true;
+
     public HexGrid hexGrid;
+
+    public HexMapGenerator mapGenerator;
 
     public void Open()
     {
@@ -18,24 +22,18 @@ public class NewMapMenu : MonoBehaviour
         HexMapCamera.Locked = false;
     }
 
-    public void CreateSmallMap()
-    {
-        CreateMap(20, 15);
-    }
+    public void ToggleMapGeneration(bool toggle) => generateMaps = toggle;
 
-    public void CreateMediumMap()
-    {
-        CreateMap(40, 30);
-    }
+    public void CreateSmallMap() => CreateMap(20, 15);
 
-    public void CreateLargeMap()
-    {
-        CreateMap(80, 60);
-    }
+    public void CreateMediumMap() => CreateMap(40, 30);
+
+    public void CreateLargeMap() => CreateMap(80, 60);
 
     private void CreateMap(int x, int z)
     {
-        hexGrid.CreateMap(x, z);
+        if (generateMaps) mapGenerator.GenerateMap(x, z);
+        else hexGrid.CreateMap(x, z);
         HexMapCamera.ValidatePosition();
         Close();
     }
