@@ -25,6 +25,7 @@ public class HexCell : MonoBehaviour
     private int specialIndex;
     private int distance;
     private int visibility;
+    private bool explored;
 
     public HexCoordinates coordinates;
     public RectTransform uiRect;
@@ -50,7 +51,10 @@ public class HexCell : MonoBehaviour
             if (elevation == value)
                 return;
 
+            int originalViewElevation = ViewElevation;
             elevation = value;
+            if (ViewElevation != originalViewElevation)
+                ShaderData.ViewElevationChanged();
             RefreshPosition();
             ValidateRivers();
 
@@ -104,7 +108,10 @@ public class HexCell : MonoBehaviour
             if (waterLevel == value)
                 return;
 
+            int originalViewElevation = ViewElevation;
             waterLevel = value;
+            if (ViewElevation != originalViewElevation)
+                ShaderData.ViewElevationChanged();
             ValidateRivers();
             Refresh();
         }
@@ -197,9 +204,13 @@ public class HexCell : MonoBehaviour
 
     public int Index { get; set; }
 
-    public bool IsVisible { get => visibility > 0; }
+    public bool IsVisible { get => visibility > 0 && Explorable; }
 
-    public bool IsExplored { get; private set; }
+    public bool IsExplored { get => explored && Explorable; private set => explored = value; }
+
+    public int ViewElevation { get => elevation >= waterLevel ? elevation : waterLevel; }
+
+    public bool Explorable { get; set; }
 
     public HexCell GetNeighbor(HexDirection direction) => neighbors[(int)direction];
 
@@ -442,5 +453,14 @@ public class HexCell : MonoBehaviour
     {
         visibility--;
         if (visibility == 0) ShaderData.RefreshVisibility(this);
+    }
+
+    public void ResetVisibility()
+    {
+        if (visibility > 0)
+        {
+            visibility = 0;
+            ShaderData.RefreshVisibility(this);
+        }
     }
 }
