@@ -2987,6 +2987,11 @@ MonoBehaviour:
   waterLevel: 3
   elevationMinimum: -2
   elevationMaximum: 8
+  mapBorderX: 5
+  mapBorderZ: 5
+  regionBorder: 5
+  regionCount: 1
+  erosionPercentage: 50
 --- !u!4 &258888576
 Transform:
   m_ObjectHideFlags: 0
@@ -15560,10 +15565,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1218010920}
   m_HandleRect: {fileID: 633607002}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 6
+  m_MinValue: -2
+  m_MaxValue: 8
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: -2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

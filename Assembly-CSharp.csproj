@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\HexUnit.cs" />
     <Compile Include="Assets\Scripts\HexMetrics.cs" />
+    <Compile Include="Assets\Scripts\HexMapGenerator.cs" />
     <Compile Include="Assets\Scripts\EdgeVertices.cs" />
     <Compile Include="Assets\Scripts\ListPool.cs" />
     <Compile Include="Assets\Scripts\HexHash.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Scripts\UI\NewMapMenu.cs" />
     <Compile Include="Assets\Scripts\HexFeatureManager.cs" />
     <Compile Include="Assets\Scripts\HexCell.cs" />
-    <Compile Include="Assets\Scripts\HexMapGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
