@@ -212,6 +212,8 @@ public class HexCell : MonoBehaviour
 
     public bool Explorable { get; set; }
 
+    public int ColumnIndex { get; set; }
+
     public HexCell GetNeighbor(HexDirection direction) => neighbors[(int)direction];
 
     public void SetNeighbor(HexDirection direction, HexCell cell)

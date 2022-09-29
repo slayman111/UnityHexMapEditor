@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SaveLoadMenu : MonoBehaviour
 {
-    private const int mapFileVersion = 4;
+    private const int mapFileVersion = 5;
 
     private bool saveMode;
 

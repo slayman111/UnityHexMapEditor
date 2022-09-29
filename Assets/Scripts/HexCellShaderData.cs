@@ -45,7 +45,8 @@ public class HexCellShaderData : MonoBehaviour
             cellTexture = new(x, z, TextureFormat.RGBA32, false, true)
             {
                 filterMode = FilterMode.Point,
-                wrapMode = TextureWrapMode.Clamp
+                wrapModeU = TextureWrapMode.Repeat,
+                wrapModeV = TextureWrapMode.Clamp
             };
             Shader.SetGlobalTexture("_HexCellData", cellTexture);
         }

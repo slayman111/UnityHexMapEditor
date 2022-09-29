@@ -62,8 +62,9 @@
     <Compile Include="Assets\Scripts\ListPool.cs" />
     <Compile Include="Assets\Scripts\HexHash.cs" />
     <Compile Include="Assets\Scripts\HexMesh.cs" />
-    <Compile Include="Assets\Scripts\HexMapEditor.cs" />
+    <Compile Include="Assets\Scripts\UI\HexMapEditor.cs" />
     <Compile Include="Assets\Scripts\HexCellPriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\HexMapGenerator.cs" />
     <Compile Include="Assets\Scripts\HexGrid.cs" />
     <Compile Include="Assets\Scripts\UI\SaveLoadItem.cs" />
     <Compile Include="Assets\Scripts\HexDirection.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Scripts\UI\NewMapMenu.cs" />
     <Compile Include="Assets\Scripts\HexFeatureManager.cs" />
     <Compile Include="Assets\Scripts\HexCell.cs" />
-    <Compile Include="Assets\Scripts\HexMapGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -104,6 +104,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Shaders\Feature.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Shaders\HexMetrics.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Shaders\Water.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
