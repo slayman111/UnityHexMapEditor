@@ -55,6 +55,7 @@ public class HexCell : MonoBehaviour
             elevation = value;
             if (ViewElevation != originalViewElevation)
                 ShaderData.ViewElevationChanged();
+
             RefreshPosition();
             ValidateRivers();
 

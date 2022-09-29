@@ -7,16 +7,16 @@ public class HexMapEditor : MonoBehaviour
     public HexGrid hexGrid;
     public Material terrainMaterial;
 
-    private int activeElevation;
+    private int activeElevation = -2;
     private int activeWaterLevel;
 
     private int activeUrbanLevel, activeFarmLevel, activePlantLevel, activeSpecialIndex;
 
-    private int activeTerrainTypeIndex;
+    private int activeTerrainTypeIndex = -1;
 
     private int brushSize;
 
-    private bool applyElevation = true;
+    private bool applyElevation = false;
     private bool applyWaterLevel = true;
 
     private bool applyUrbanLevel, applyFarmLevel, applyPlantLevel, applySpecialIndex;
