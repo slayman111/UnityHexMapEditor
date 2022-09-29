@@ -21,8 +21,6 @@ public class HexMapEditor : MonoBehaviour
 
     private bool applyUrbanLevel, applyFarmLevel, applyPlantLevel, applySpecialIndex;
 
-    private bool generateMaps;
-
     private enum OptionalToggle
     {
         Ignore, Yes, No
@@ -69,8 +67,6 @@ public class HexMapEditor : MonoBehaviour
     public void SetWalledMode(int mode) => walledMode = (OptionalToggle)mode;
 
     public void SetEditMode(bool toggle) => enabled = toggle;
-
-    public void ToggleMapGeneration(bool toggle) => generateMaps = toggle;
 
     private void Awake()
     {
