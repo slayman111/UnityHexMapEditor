@@ -17,7 +17,7 @@ public class HexMapEditor : MonoBehaviour
     private int brushSize;
 
     private bool applyElevation = false;
-    private bool applyWaterLevel = true;
+    private bool applyWaterLevel = false;
 
     private bool applyUrbanLevel, applyFarmLevel, applyPlantLevel, applySpecialIndex;
 
