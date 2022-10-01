@@ -30,6 +30,7 @@ public class HexCell : MonoBehaviour
     public HexCoordinates coordinates;
     public RectTransform uiRect;
     public HexGridChunk chunk;
+
     public int TerrainTypeIndex
     {
         get => terrainTypeIndex;

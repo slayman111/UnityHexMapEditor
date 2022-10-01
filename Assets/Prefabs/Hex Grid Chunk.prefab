@@ -46,41 +46,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   urbanCollections:
   - prefabs:
-    - {fileID: 4000011812086372, guid: 21b1020286582424ab6d62085ed5ee87, type: 3}
-    - {fileID: 4000011812086372, guid: 5d26578fd32c84d1ab4d755ab7f23577, type: 3}
+    - {fileID: 6796626859266246684, guid: a0c666e55f4d7414c96bc8c96dd5c056, type: 3}
+    - {fileID: 665045674327840751, guid: c1c7c68e86836ae4c8e13979eca129f6, type: 3}
   - prefabs:
-    - {fileID: 4000013436407900, guid: 89adbf41f320f4141964bfa388ba2865, type: 3}
-    - {fileID: 4000013436407900, guid: 2fad1b4af64d84c8e810f040299dec1e, type: 3}
+    - {fileID: 2447786332532256502, guid: a3530e0941824fa409a3f3f22ba27cce, type: 3}
+    - {fileID: 8418511000754066108, guid: 700e46b3a03663741be3273c19d85752, type: 3}
   - prefabs:
-    - {fileID: 4000013997932258, guid: bca46d0c670c447a0a5c7208498000ab, type: 3}
-    - {fileID: 4000013997932258, guid: 4c4b904516a814dc7b4433a49713c96f, type: 3}
+    - {fileID: 8053570852994840855, guid: 9c66b71aab9b2a848bc05531b9d02e98, type: 3}
+    - {fileID: 5868944412391705580, guid: 749bd61a9bbbfcc42a6641f5778d3b8d, type: 3}
   farmCollections:
   - prefabs:
-    - {fileID: 4000011812086372, guid: 694c4113acb734a299b240d50494600c, type: 3}
-    - {fileID: 4000011812086372, guid: 93fc8e728d60b44a28eac5ac0d4a0852, type: 3}
+    - {fileID: 5336945291417214753, guid: a4cdb86d8c1866e4dbae515113471f40, type: 3}
+    - {fileID: 6898205552226008533, guid: 92037a31d42776c4cb00f91b01a1bb25, type: 3}
   - prefabs:
-    - {fileID: 4000013436407900, guid: 2183fa930894243a69c8d48294482e53, type: 3}
-    - {fileID: 4000013436407900, guid: d0962edf5b6cf47f8b0a1fc7ae336c32, type: 3}
+    - {fileID: 8633420445161881382, guid: e53d028e16e9969458812cf71cb12dae, type: 3}
+    - {fileID: 7674683465355006572, guid: 52d7adaf5477c3446b7acfb61982b1d4, type: 3}
   - prefabs:
-    - {fileID: 4000013997932258, guid: 15bb05f82a5564326ae50111c46b898b, type: 3}
-    - {fileID: 4000013997932258, guid: 5c6c17863f6cc4021bdced61fe712fb1, type: 3}
+    - {fileID: 8072325527856820161, guid: 164a9a19d711375419c2e5f999386fef, type: 3}
+    - {fileID: 5485874715271441942, guid: 5d9d0aa855fe3f442afa0cec4949169d, type: 3}
   plantCollections:
   - prefabs:
-    - {fileID: 4000011812086372, guid: e64480d9f2c5c42439cac262a22f542f, type: 3}
-    - {fileID: 4000011812086372, guid: 3b3f395112d654a6a85e97ebefaf4d91, type: 3}
+    - {fileID: -8679921383154817045, guid: c8a29a7215fd0a14689978fd8ec45f3d, type: 3}
+    - {fileID: -8679921383154817045, guid: cd70e2cafc3396f419d77242a47d12f3, type: 3}
   - prefabs:
-    - {fileID: 4000013436407900, guid: db065bb94d2684adf9f80eb695f76fed, type: 3}
-    - {fileID: 4000013436407900, guid: 0e9a5fa1d0db54bd09163d3d6509d210, type: 3}
+    - {fileID: -8679921383154817045, guid: 44341d6df7635424eba8c1fb176c5024, type: 3}
+    - {fileID: -8679921383154817045, guid: d2f930ec70d464447a2d1120b2b82a20, type: 3}
   - prefabs:
-    - {fileID: 4000013997932258, guid: eeb3748a5f0ed40f3ad86263ab781421, type: 3}
-    - {fileID: 4000013997932258, guid: 2fe8d139a980145f997e9f4c3e1c2606, type: 3}
+    - {fileID: -8679921383154817045, guid: 69578f44af5b6f2498f0651295665f07, type: 3}
+    - {fileID: -8679921383154817045, guid: 755dfaff5ef61614c90f404fab074754, type: 3}
   walls: {fileID: 114000013599494320}
-  wallTower: {fileID: 4000011665626236, guid: 1589993158ba34786b54f448bdeb6085, type: 3}
+  wallTower: {fileID: 3349107673810557633, guid: d57f88ad58b19974d825ed5d5aadeb42, type: 3}
   bridge: {fileID: 4000012598710820, guid: 234387bb7219042168570e127fbd5b58, type: 3}
   special:
-  - {fileID: 4000013750885840, guid: f2967fed6444e43559e32916c2465d27, type: 3}
-  - {fileID: 4000011263270592, guid: cb7be9a74fd6e4cbdb5be2ac7319e699, type: 3}
-  - {fileID: 4000012893891830, guid: cc90e6fbc542a40c080d2c64da7d26ed, type: 3}
+  - {fileID: 3773472854464014553, guid: 088690a76d5731d45aae4d7756d53399, type: 3}
+  - {fileID: 3641561274913380399, guid: 06d983491eb2ceb458a95a58f75c2891, type: 3}
+  - {fileID: 6192022200685947664, guid: 4674cc6218513c54d9091d062c83adc5, type: 3}
 --- !u!1 &1000010636493760
 GameObject:
   m_ObjectHideFlags: 0

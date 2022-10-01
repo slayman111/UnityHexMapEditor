@@ -8477,7 +8477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &981427632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8492,11 +8492,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexGrid: {fileID: 1571186511}
   prefabs:
-  - {fileID: 919132149155446097, guid: b989ba2894bedc6418b2b2679935e893, type: 3}
-  - {fileID: 919132149155446097, guid: 18008cd9888c6694db6bc327116bc7ab, type: 3}
-  - {fileID: 919132149155446097, guid: 88dcdf2be754c414e81501e30bb2bcfa, type: 3}
-  - {fileID: 919132149155446097, guid: 882011027a07e144aa7388a7b41d4a97, type: 3}
-  - {fileID: 919132149155446097, guid: c70ab1942252a944ebf03887bcfa0a43, type: 3}
+  - {fileID: 919132149155446097, guid: d86d4ad36acb3344aa7930a23ccb45a8, type: 3}
+  - {fileID: 919132149155446097, guid: fe770c583a57d934e9fdbb771d45b3db, type: 3}
+  - {fileID: 919132149155446097, guid: adc3f367158ff39499da8e37fcf096e8, type: 3}
+  - {fileID: 919132149155446097, guid: 46202227e0cc8a54794b053b85670abb, type: 3}
+  - {fileID: 919132149155446097, guid: 3f6d432932cec144d94b5e2c7bc59f42, type: 3}
   lookAt: {fileID: 68505623}
   combinedInputs: {fileID: 981427633}
   yOffset: 0
@@ -8504,7 +8504,7 @@ MonoBehaviour:
   swipesPerSecond: 1
   percSwipeRiseFall: 0.1
   smoothed: 1
-  fadeRenderer: 0
+  fadeRenderer: 1
 --- !u!114 &981427633
 MonoBehaviour:
   m_ObjectHideFlags: 0

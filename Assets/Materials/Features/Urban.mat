@@ -10,8 +10,7 @@ Material:
   m_Name: Urban
   m_Shader: {fileID: 4800000, guid: d94279759e5a64a69ab00da5cf1fcf16, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _EMISSION
+  m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -81,7 +80,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BackgroundColor: {r: 0.40784314, g: 0.38039216, b: 0.35686275, a: 1}
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.5315002, g: 0.5333208, b: 0.50151974, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Specular: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
